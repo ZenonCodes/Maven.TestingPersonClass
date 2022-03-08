@@ -243,7 +243,7 @@ public class TestPerson {
 
         // When
         Person person = new Person();
-        person.setPets(true);
+        person.setPets(expected);
 
         // Then
         Assert.assertTrue(person.getPets());
@@ -252,12 +252,12 @@ public class TestPerson {
     @Test
     public void testSetPets() {
         // Given
-        Boolean expected = true;
+        Boolean expected = false;
 
         // When
         Person person = new Person();
         person.setPets(true);
-        person.setPets(false);
+        person.setPets(expected);
 
         // Then
         Assert.assertFalse(person.getPets());
